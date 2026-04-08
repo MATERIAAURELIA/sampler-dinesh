@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Noodle Soup — Cozy Beats from the Soul Kitchen</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f1a; color: #e8e8e8; min-height: 100vh; }
+  header { background: #1a1a2e; border-bottom: 2px solid #d4a843; padding: 32px 24px; text-align: center; }
+  header img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #d4a843; margin-bottom: 12px; object-fit: cover; }
+  header h1 { color: #f0c040; font-size: 28px; margin-bottom: 4px; }
+  header .tagline { color: #ccc; font-size: 16px; font-style: italic; margin-bottom: 6px; }
+  header .subtitle { color: #888; font-size: 13px; }
+  header .credit { color: #555; font-size: 11px; margin-top: 8px; }
+  main { max-width: 750px; margin: 0 auto; padding: 24px 16px; }
+  .intro { color: #888; font-size: 14px; line-height: 1.6; margin-bottom: 24px; padding: 16px; background: #1a1a1a; border-radius: 10px; border: 1px solid #333; }
+  .track { background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 16px; margin-bottom: 12px; transition: border-color 0.2s; }
+  .track:hover { border-color: #444; }
+  .track-title { font-size: 17px; font-weight: 600; color: #e8e8e8; margin-bottom: 2px; }
+  .track-meta { font-size: 12px; color: #666; margin-bottom: 6px; }
+  .badge-60 { font-size: 10px; color: #555; background: #222; border-radius: 4px; padding: 2px 6px; margin-left: 8px; }
+  .track-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+  .tag { font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 500; }
+  .tag-mood { background: #2a1f3a; color: #c4a0e0; }
+  .tag-instrument { background: #1a2a3a; color: #7cb8d4; }
+  .tag-function { background: #1a2f1a; color: #7cc47c; }
+  .tag-energy { background: #3a2a1a; color: #d4a060; }
+  .player { display: flex; align-items: center; gap: 10px; }
+  .play-btn { background: #1a1a1a; border: 2px solid #d4a843; color: #d4a843; border-radius: 20px; padding: 6px 16px; font-size: 13px; cursor: pointer; white-space: nowrap; transition: all 0.15s; flex-shrink: 0; }
+  .play-btn:hover, .play-btn.playing { background: #d4a843; color: #111; }
+  .progress-bar { flex: 1; height: 8px; background: #333; border-radius: 4px; overflow: hidden; cursor: pointer; }
+  .fill { height: 100%; background: #d4a843; border-radius: 4px; width: 0%; transition: width 0.1s; pointer-events: none; }
+  .time { font-size: 12px; color: #666; min-width: 36px; text-align: right; }
+  footer { text-align: center; padding: 40px 20px; color: #555; font-size: 13px; }
+  .contact-btn { display: inline-block; margin-top: 16px; background: #d4a843; color: #111; padding: 12px 28px; border-radius: 24px; font-size: 15px; font-weight: 700; text-decoration: none; transition: all 0.15s; }
+  .contact-btn:hover { background: #f0c040; }
+</style>
+</head>
+<body>
+<header>
+  <img src="djnoodlesoup.jpg" alt="DJ Noodle Soup">
+  <h1>DJ Noodle Soup</h1>
+  <div class="tagline">Cozy Beats from the Soul Kitchen</div>
+  <div class="subtitle">13 hand-picked tracks from 160+ original lo-fi compositions</div>
+  <div class="credit">by Earth Harmony Sound & Wellness · 2026</div>
+</header>
+<main>
+  <div class="intro">
+    Hey Dinesh — here's a sampler of some of my original lo-fi beats. These are the kinds of tracks that are great for setting a vibe — cozy, soulful, easy to have on in the background all day. Have a listen and let me know what you think. — Marcus
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Cool Down</div><div class="track-meta">2:55 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-instrument">piano</span><span class="tag tag-function">lo-fi</span><span class="tag tag-energy">mid</span><span class="tag tag-mood">nostalgic</span><span class="tag tag-mood">peaceful</span><span class="tag tag-mood">warm</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('a9e376a29721',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'a9e376a29721')"><div class="fill" id="f-a9e376a29721"></div></div><span class="time" id="t-a9e376a29721">0:00</span></div>
+    <audio id="a-a9e376a29721" src="clips/a9e376a29721.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Easy Breezy</div><div class="track-meta">2:33 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-mood">peaceful</span><span class="tag tag-mood">playful</span><span class="tag tag-energy">uplifting</span><span class="tag tag-function">jazzy</span><span class="tag tag-instrument">piano</span><span class="tag tag-mood">warm</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('2d141cccd817',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'2d141cccd817')"><div class="fill" id="f-2d141cccd817"></div></div><span class="time" id="t-2d141cccd817">0:00</span></div>
+    <audio id="a-2d141cccd817" src="clips/2d141cccd817.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Daily Self Discovery</div><div class="track-meta">2:59 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-mood">playful</span><span class="tag tag-function">jazzy</span><span class="tag tag-mood">nostalgic</span><span class="tag tag-energy">uplifting</span><span class="tag tag-instrument">horns</span><span class="tag tag-instrument">voice</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('4b081ebbeba5',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'4b081ebbeba5')"><div class="fill" id="f-4b081ebbeba5"></div></div><span class="time" id="t-4b081ebbeba5">0:00</span></div>
+    <audio id="a-4b081ebbeba5" src="clips/4b081ebbeba5.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Letting Go of Attachments</div><div class="track-meta">4:25 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-function">jazzy</span><span class="tag tag-instrument">horns</span><span class="tag tag-function">lo-fi</span><span class="tag tag-mood">warm</span><span class="tag tag-mood">spacious</span><span class="tag tag-energy">uplifting</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('b55ed3084487',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'b55ed3084487')"><div class="fill" id="f-b55ed3084487"></div></div><span class="time" id="t-b55ed3084487">0:00</span></div>
+    <audio id="a-b55ed3084487" src="clips/b55ed3084487.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Delightful</div><div class="track-meta">3:18 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-mood">playful</span><span class="tag tag-energy">uplifting</span><span class="tag tag-function">jazzy</span><span class="tag tag-mood">peaceful</span><span class="tag tag-instrument">synth</span><span class="tag tag-instrument">piano</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('0518f9a24a7e',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'0518f9a24a7e')"><div class="fill" id="f-0518f9a24a7e"></div></div><span class="time" id="t-0518f9a24a7e">0:00</span></div>
+    <audio id="a-0518f9a24a7e" src="clips/0518f9a24a7e.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Everything's Going to Be Okay</div><div class="track-meta">3:17 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-energy">uplifting</span><span class="tag tag-mood">grounding</span><span class="tag tag-mood">peaceful</span><span class="tag tag-mood">nostalgic</span><span class="tag tag-function">jazzy</span><span class="tag tag-instrument">piano</span><span class="tag tag-instrument">horns</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('45986d362592',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'45986d362592')"><div class="fill" id="f-45986d362592"></div></div><span class="time" id="t-45986d362592">0:00</span></div>
+    <audio id="a-45986d362592" src="clips/45986d362592.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Stand Back Appreciation</div><div class="track-meta">2:12 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-function">lo-fi</span><span class="tag tag-energy">uplifting</span><span class="tag tag-instrument">guitar</span><span class="tag tag-mood">grounding</span><span class="tag tag-function">jazzy</span><span class="tag tag-mood">nostalgic</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('4f8d0cc65be6',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'4f8d0cc65be6')"><div class="fill" id="f-4f8d0cc65be6"></div></div><span class="time" id="t-4f8d0cc65be6">0:00</span></div>
+    <audio id="a-4f8d0cc65be6" src="clips/4f8d0cc65be6.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Dream Yourself Awake</div><div class="track-meta">3:19 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-instrument">guitar</span><span class="tag tag-function">lo-fi</span><span class="tag tag-function">jazzy</span><span class="tag tag-mood">nostalgic</span><span class="tag tag-mood">spacious</span><span class="tag tag-energy">uplifting</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('53d4ccc3f68e',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'53d4ccc3f68e')"><div class="fill" id="f-53d4ccc3f68e"></div></div><span class="time" id="t-53d4ccc3f68e">0:00</span></div>
+    <audio id="a-53d4ccc3f68e" src="clips/53d4ccc3f68e.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Rain Day Smile</div><div class="track-meta">3:16 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-mood">warm</span><span class="tag tag-mood">playful</span><span class="tag tag-mood">peaceful</span><span class="tag tag-function">jazzy</span><span class="tag tag-energy">uplifting</span><span class="tag tag-instrument">horns</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('9673618f483f',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'9673618f483f')"><div class="fill" id="f-9673618f483f"></div></div><span class="time" id="t-9673618f483f">0:00</span></div>
+    <audio id="a-9673618f483f" src="clips/9673618f483f.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Lounge Lizard 2</div><div class="track-meta">2:37 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-function">lo-fi</span><span class="tag tag-mood">playful</span><span class="tag tag-energy">uplifting</span><span class="tag tag-instrument">guitar</span><span class="tag tag-mood">warm</span><span class="tag tag-function">jazzy</span><span class="tag tag-instrument">piano</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('a27743cd8dd2',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'a27743cd8dd2')"><div class="fill" id="f-a27743cd8dd2"></div></div><span class="time" id="t-a27743cd8dd2">0:00</span></div>
+    <audio id="a-a27743cd8dd2" src="clips/a27743cd8dd2.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Classic Jazzy Vibes</div><div class="track-meta">2:20 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-function">jazzy</span><span class="tag tag-mood">peaceful</span><span class="tag tag-energy">uplifting</span><span class="tag tag-function">lo-fi</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('8281fcb8e409',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'8281fcb8e409')"><div class="fill" id="f-8281fcb8e409"></div></div><span class="time" id="t-8281fcb8e409">0:00</span></div>
+    <audio id="a-8281fcb8e409" src="clips/8281fcb8e409.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Like An Old Radio</div><div class="track-meta">3:05 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-function">jazzy</span><span class="tag tag-mood">nostalgic</span><span class="tag tag-mood">warm</span><span class="tag tag-mood">spacious</span><span class="tag tag-mood">grounding</span><span class="tag tag-instrument">nature</span><span class="tag tag-energy">slow</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('95c88dda7c38',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'95c88dda7c38')"><div class="fill" id="f-95c88dda7c38"></div></div><span class="time" id="t-95c88dda7c38">0:00</span></div>
+    <audio id="a-95c88dda7c38" src="clips/95c88dda7c38.mp3" preload="none"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-header"><div class="track-title">Just in Time</div><div class="track-meta">3:47 <span class="badge-60">60s preview</span></div></div>
+    <div class="track-tags"><span class="tag tag-function">lo-fi</span><span class="tag tag-energy">slow</span><span class="tag tag-function">jazzy</span><span class="tag tag-mood">nostalgic</span><span class="tag tag-mood">warm</span><span class="tag tag-mood">spacious</span><span class="tag tag-instrument">nature</span></div>
+    <div class="player"><button class="play-btn" onclick="toggle('ca2ffab07159',this)">&#9654;</button><div class="progress-bar" onclick="seek(event,'ca2ffab07159')"><div class="fill" id="f-ca2ffab07159"></div></div><span class="time" id="t-ca2ffab07159">0:00</span></div>
+    <audio id="a-ca2ffab07159" src="clips/ca2ffab07159.mp3" preload="none"></audio>
+  </div>
+
+</main>
+<footer>
+  <p>DJ Noodle Soup · Cozy Beats from the Soul Kitchen</p>
+  <p style="margin-top:4px; color:#444;">Earth Harmony Sound & Wellness · 2026</p>
+  <a href="mailto:earthharmonysoundhealing@gmail.com?subject=Lo-Fi%20Sampler%20Feedback" class="contact-btn">Get in Touch</a>
+</footer>
+
+<script>
+let ca=null,caId=null,ct=null;
+function toggle(id,btn){
+  if(caId===id){ca.pause();stop(id,btn);return;}
+  if(ca){const ob=document.querySelector('.play-btn.playing');if(ob){stop(caId,ob);}}
+  ca=document.getElementById('a-'+id);caId=id;
+  ca.currentTime=0;ca.play();
+  btn.textContent='\u23F8';btn.classList.add('playing');
+  ct=setInterval(()=>{
+    if(!ca||!ca.duration)return;
+    const p=(ca.currentTime/ca.duration)*100;
+    document.getElementById('f-'+id).style.width=Math.min(p,100)+'%';
+    const s=Math.floor(ca.currentTime);
+    document.getElementById('t-'+id).textContent=Math.floor(s/60)+':'+(s%60).toString().padStart(2,'0');
+    if(ca.ended){stop(id,btn);}
+  },200);
+}
+function stop(id,btn){clearInterval(ct);ct=null;if(ca){ca.pause();}ca=null;caId=null;if(btn){btn.textContent='\u25B6';btn.classList.remove('playing');}document.getElementById('f-'+id).style.width='0%';}
+function seek(e,id){
+  if(caId!==id||!ca)return;
+  const r=e.currentTarget.getBoundingClientRect();
+  ca.currentTime=((e.clientX-r.left)/r.width)*(ca.duration||60);
+}
+</script>
+</body>
+</html>
